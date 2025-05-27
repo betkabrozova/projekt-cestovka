@@ -1,3 +1,47 @@
 html { box-sizing: border-box; }
 *, :after, :before { box-sizing: inherit; }
 
+$primary: #F03000;
+$background: #F0F0F0;
+$grey-text:#888888;
+$footer:#444444;
+$spacer: 20px;
+
+body{
+    margin: 20px auto;
+    max-width: 480px;
+    text-align: center;
+}
+h1, h2, a, .trip__price{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+}
+p{
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+}
+header{
+    text-align: center;
+}
+.logo{
+    padding: $spacer;
+}
+.menu{ 
+    padding: $spacer 0px;
+    a{
+    display: inline-block;
+    padding: $spacer;
+    color: #F03000;
+    text-decoration: none;
+
+    &:hover{
+        color: white;
+        background-color:$primary;
+    }
+}
+}
