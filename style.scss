@@ -28,13 +28,11 @@ p{
   font-size: 16px;
 }
 
-h2 + section {
+h1 + section {
   margin-top: 20px;
 }
 header{
     text-align: center;
-
-    
 }
 .logo{
     padding: $spacer;
@@ -197,12 +195,72 @@ footer{
     .services{
         grid-template-columns: 1fr 1fr;
     }
+    .panel{
+        grid-template-columns: 1fr;
+        text-align: center;
+        column-gap: 0;
+        row-gap: 20px;
+        justify-items: center;
+
+        img{
+        grid-row-start: 1;
+        grid-column-start: 1;
+    }
+    &__title{
+        grid-row-start: 2;
+        grid-column-start: 1;
+    }
+    &__text{
+        grid-row-start: 3;
+        grid-column-start: 1;
+    }
+    }
+    }
+
+    @media screen and (min-width: 960px) {
+       
+    body{
+        max-width: 1160px;
+    }
+    .menu{
+        justify-content: end;
+
+        a{
+        flex-grow: 0;
+        }
+    }
+    .samples--left{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 180px 180px;
+        gap: $spacer;
+        grid-auto-flow: dense ;
+        .trip--main{
+             grid-area: 1 / 1 / 3 / 3;
+         }
+        .trip--secondary{
+            grid-column-start: 3;
+            grid-row-start: auto;
+        }
+    }
+    .samples--right{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 180px 180px;
+        gap: $spacer;
+        grid-auto-flow: dense;
+
+        .trip--main{
+            grid-area: -1 / -1 / -3 / -3;
+        }  
+        .trip--secondary{
+            grid-row-start: auto;
+        }
+    }
+    .services{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .news{
+        flex-direction: row;
+
     
-
-
-
-
-
-
-
+    }
     }
