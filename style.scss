@@ -10,7 +10,7 @@ $spacer: 20px;
 body{
     margin: 20px auto;
     max-width: 480px;
-    text-align: center;
+    // text-align: center;
 }
 h1, h2, a, .trip__price{
   font-family: "Montserrat", sans-serif;
@@ -23,7 +23,8 @@ p{
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: 18px;
+  font-size: 16px;
+  margin: 0px;
 }
 header{
     text-align: center;
@@ -33,15 +34,70 @@ header{
 }
 .menu{ 
     padding: $spacer 0px;
+    display: flex;
     a{
-    display: inline-block;
+    display: block;
     padding: $spacer;
+    flex: 1;
     color: #F03000;
     text-decoration: none;
+    font-size: 18px;
 
     &:hover{
         color: white;
         background-color:$primary;
     }
 }
+}
+.samples{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 240px 150px 150px;
+    gap: $spacer;
+   
+}
+.trip{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: $spacer;
+
+    img{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+    &__price{
+        z-index: 1;
+        position: relative;
+        background-color: #F03000;
+        padding: 10px;
+        margin: 0px;
+        width: fit-content;
+        color: white;
+    }
+    &__title{
+        z-index: 1;
+        position: relative;
+        width: fit-content;
+        color: white;
+        margin-top: auto;
+        font-weight: 600;
+        &--main{
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        font-size: 20px;
+        margin-bottom: 0px;
+    }
+    &__text{
+        z-index: 1;
+        position: relative;
+        margin: 0px;
+        width: fit-content;
+        color: white;
+    }
 }
