@@ -14,11 +14,6 @@ body {
   font-style: normal;
   font-weight: 400;
 }
-@media screen and (min-width: 768px) {
-  body {
-    max-width: 800px;
-  }
-}
 
 h1, h2, h3 {
   margin: 0;
@@ -38,11 +33,6 @@ h2 + section {
 
 header {
   text-align: center;
-}
-@media screen and (min-width: 768px) {
-  header {
-    display: flex;
-  }
 }
 
 .logo {
@@ -73,12 +63,6 @@ header {
   grid-template-rows: 240px 150px 150px;
   gap: 20px;
   margin-bottom: 40px;
-}
-@media screen and (min-width: 768px) {
-  .samples {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 380px 180px;
-  }
 }
 
 .trip {
@@ -128,15 +112,10 @@ header {
   width: fit-content;
   color: white;
 }
-@media screen and (min-width: 768px) {
-  .trip--main {
-    grid-column: span2;
-  }
-}
 
 .services {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 10px;
   margin-bottom: 40px;
 }
@@ -198,4 +177,27 @@ footer {
   background-color: #444444;
   padding: 20px;
   margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    max-width: 728px;
+  }
+  header {
+    display: flex;
+  }
+  .samples {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 380px 180px;
+  }
+  .trip--main {
+    grid-row-start: 1;
+    grid-column: 1/span 2;
+  }
+  .trip--secondary {
+    grid-row-start: 2;
+  }
+  .services {
+    grid-template-columns: 1fr 1fr;
+  }
 }/*# sourceMappingURL=style.css.map */
